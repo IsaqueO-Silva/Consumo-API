@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>API - ViaCEP</title>
+  </head>
+  <body class="bg-dark">
+    <section>
+        <div class="container">
+            <!--Form begin-->
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12">
+                    <div class="card mt-5">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12">
+                                <div class="card-header bg-danger text-white fw-bold">
+                                    CONSULTAR CEP - VIACEP
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <div class="mb-3">
+                                                            <label for="cep" class="form-label">CEP</label>
+                                                            <input type="text" class="form-control" id="cep" name="cep">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <div class="mb-3">
+                                                            <label for="logradouro" class="form-label">Logradouro</label>
+                                                            <input type="text" class="form-control" id="logradouro" name="logradouro">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <div class="mb-3">
+                                                            <label for="complemento" class="form-label">Complemento</label>
+                                                            <input type="text" class="form-control" id="complemento" name="complemento">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="bairro">Bairro</label>
+                                                            <input type="text" class="form-control" id="bairro" name="bairro">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-3 col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="uf">UF</label>
+                                                            <input type="text" class="form-control" id="uf" name="uf">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-3 col-md-3">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="codigoIBGE">Código IBGE</label>
+                                                            <input type="text" class="form-control" id="codigoIBGE" name="codigoIBGE">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="localidade">Localidade</label>
+                                                            <input type="text" class="form-control" id="localidade" name="localidade">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-2 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="gia">GIA</label>
+                                                            <input type="text" class="form-control" id="gia" name="gia">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-2 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="ddd">DDD</label>
+                                                            <input type="text" class="form-control" id="ddd" name="ddd">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-2 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="siafi">SIAFI</label>
+                                                            <input type="text" class="form-control" id="siafi" name="siafi">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/Form end-->
+        </div>
+    </section>
+
+    <!--Scripts-->
+    <script src="assets/js/ViaCEP.js"></script>
+    <!--/Scripts-->
+  </body>
+</html>
