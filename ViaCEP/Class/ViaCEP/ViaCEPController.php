@@ -1,11 +1,12 @@
 <?php
 
 require_once('../../assets/utilitarios/utilitarios.php');
-//require_once('ViaCEPModel.php');
+require_once('ViaCEPModel.php');
 
 class ViaCEPController {
 
     private $cep;
+    private $result;
 
     #region
     public function __construct($args) {
@@ -19,10 +20,30 @@ class ViaCEPController {
     public function get_cep() {
         return $this->cep;
     }
+
+    public function set_result($result) {
+        $this->result = $result;
+    }
+
+    public function get_result() {
+        return $this->result;
+    }
     #endregion
 
+    /* Função utilizada para consulta de CEP no webservice ViaCEP */
     public function consultaCepViaCEPController() {
-        echo $this->get_cep();
+        /* Instânciando o objeto Model */
+        $viaCEPModel = new ViaCEPModel([
+            'cep'   => $this->get_cep()
+        ]);
+
+        $viaCEPModel->consultaCepViaCEPModel();
+
+        /* Capturando o retorno do Model */
+        $this->set_result($viaCEPModel->get_result());
+
+        /* Retorno do Controller */
+        echo($this->get_result());
     }
 }
 
