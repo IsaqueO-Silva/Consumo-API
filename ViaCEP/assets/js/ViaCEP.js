@@ -33,7 +33,7 @@ function consultaCepViaCEP() {
                 document.getElementById('ddd').value            = result.ddd;
                 document.getElementById('siafi').value          = result.siafi;
 
-                document.getElementById('status').innerHTML = '<div class="alert alert-success" role="alert"><strong>CEP consultado com sucesso</strong></alert>';
+                document.getElementById('status').innerHTML = '<div class="alert alert-success" role="alert"><strong>CEP consultado com sucesso.</strong></alert>';
             }
         }
     }
