@@ -40,6 +40,13 @@ class ViaCEPModel {
 
                 $this->set_result(json_encode($result));
             }
+            else if(strlen($this->get_cep()) < 8) {
+                /* Retorno */
+                $result['erro']     = true;
+                $result['message']  = 'Atenção, o campo CEP deve conter 8 caracteres.';
+
+                $this->set_result(json_encode($result));
+            }
             else {
                 /* Inicializando a requisição a API ViaCEP */
                 $curl   = curl_init('https://viacep.com.br/ws/'.$this->get_cep().'/json/');
