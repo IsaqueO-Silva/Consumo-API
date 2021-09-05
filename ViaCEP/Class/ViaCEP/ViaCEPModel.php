@@ -43,16 +43,18 @@ class ViaCEPModel {
             else {
                 /* Inicializando a requisição a API ViaCEP */
                 $curl   = curl_init('https://viacep.com.br/ws/'.$this->get_cep().'/json/');
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, false);
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
                 /* Capturando a resposta do servidor */
                 $responseCurl   = curl_exec($curl);
 
+                /* Retorno */
+                $this->set_result($responseCurl);
+
                 /* Fechando a requisição */
                 curl_close($curl);
 
-                /* Retorno */
-                $this->set_result($responseCurl);
+                
             }
         }
         catch(Exception $e) {
