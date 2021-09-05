@@ -9,13 +9,17 @@ function consultaCepViaCEP() {
     xmlHttp.onreadystatechange = function() {
         if((this.readyState == 4) && (this.status == 200)) {
             /* Convertendo o JSON retornado em objeto(Object) */
-            alert(this.responseText);
-
             let result = JSON.parse(this.responseText);
 
             /* Mostrando a resposta do servidor */
-            if(result.error) {
-                document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>'+result.message+'</strong></alert>';
+            if(result.erro) {
+                if(result.message) {
+                    document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>'+result.message+'</strong></alert>';
+                }
+                else {
+                    document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>CEP inexistente!</strong></alert>';
+                }
+                
             }
             else {
                 /* Populando os campos do formulário com o resultado da consulta */
@@ -29,7 +33,7 @@ function consultaCepViaCEP() {
                 document.getElementById('ddd').value            = result.ddd;
                 document.getElementById('siafi').value          = result.siafi;
 
-                //document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>'+result+'</strong></alert>';
+                document.getElementById('status').innerHTML = '<div class="alert alert-success" role="alert"><strong>CEP consultado com sucesso</strong></alert>';
             }
         }
     }

@@ -35,7 +35,7 @@ class ViaCEPModel {
             /* Campo(s) obrigatórios */
             if(empty($this->get_cep())) {
                 /* Retorno */
-                $result['error']    = true;
+                $result['erro']     = true;
                 $result['message']  = 'Por favor, preencha o campo CEP!';
 
                 $this->set_result(json_encode($result));
@@ -53,13 +53,11 @@ class ViaCEPModel {
 
                 /* Fechando a requisição */
                 curl_close($curl);
-
-                
             }
         }
         catch(Exception $e) {
             /* Retorno */
-            $result['error']    = true;
+            $result['erro']    = true;
             $result['message']  = 'Erro ao consultar o CEP!';
 
             $this->set_result(json_encode($result));
