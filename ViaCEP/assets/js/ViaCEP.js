@@ -13,13 +13,24 @@ function consultaCepViaCEP() {
 
             /* Mostrando a resposta do servidor */
             if(result.erro) {
+                /* Em caso de erro os campos são limpos */
+                document.getElementById('logradouro').value     = '';
+                document.getElementById('complemento').value    = '';
+                document.getElementById('bairro').value         = '';
+                document.getElementById('uf').value             = '';
+                document.getElementById('codigoIBGE').value     = '';
+                document.getElementById('localidade').value     = '';
+                document.getElementById('gia').value            = '';
+                document.getElementById('ddd').value            = '';
+                document.getElementById('siafi').value          = '';
+
+                /* Mensagem de erro */
                 if(result.message) {
                     document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>'+result.message+'</strong></alert>';
                 }
                 else {
                     document.getElementById('status').innerHTML = '<div class="alert alert-danger" role="alert"><strong>CEP inexistente!</strong></alert>';
-                }
-                
+                }                
             }
             else {
                 /* Populando os campos do formulário com o resultado da consulta */
