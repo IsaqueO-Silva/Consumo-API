@@ -1,4 +1,4 @@
-Este repositório apresenta a integração com o webservice ViaCEP.
+Este repositório apresenta uma integração com o webservice ViaCEP.
 
 Consulta de CEP.
 ![cep4](https://user-images.githubusercontent.com/46305573/132264258-9ecc2062-df8c-4e4c-86af-428f670ff898.png)
