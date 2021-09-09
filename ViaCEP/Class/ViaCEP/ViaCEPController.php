@@ -54,7 +54,7 @@ if(isset($_REQUEST['status'])) {
 
         case 'consultaCepViaCEP':
             $viaCEPController = new ViaCEPController([
-                'cep'   => sanitizar($_REQUEST['cep'])
+                'cep'   => Utilitarios::sanitizar($_REQUEST['cep'])
             ]);
 
             $viaCEPController->consultaCepViaCEPController();
