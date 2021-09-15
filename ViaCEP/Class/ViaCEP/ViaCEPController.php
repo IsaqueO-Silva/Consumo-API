@@ -1,7 +1,6 @@
 <?php
 
-require_once('../../utilitarios/utilitarios.php');
-require_once('ViaCEPModel.php');
+require_once('../../config/config.php');
 
 class ViaCEPController {
 
