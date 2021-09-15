@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../config/config.php');
+require_once('..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'config'.DIRECTORY_SEPARATOR.'config.php');
 
 class ViaCEPController {
 
