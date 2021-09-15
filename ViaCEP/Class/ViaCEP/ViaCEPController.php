@@ -12,19 +12,19 @@ class ViaCEPController {
         $this->cep = $args['cep'];
     }
 
-    public function set_cep($cep) {
+    public function setCep($cep) {
         $this->cep = $cep;
     }
 
-    public function get_cep() {
+    public function getCep() {
         return $this->cep;
     }
 
-    public function set_result($result) {
+    public function setResult($result) {
         $this->result = $result;
     }
 
-    public function get_result() {
+    public function getResult() {
         return $this->result;
     }
     #endregion
@@ -33,16 +33,16 @@ class ViaCEPController {
     public function consultaCepViaCEPController() {
         /* Instânciando o objeto Model */
         $viaCEPModel = new ViaCEPModel([
-            'cep'   => $this->get_cep()
+            'cep'   => $this->getCep()
         ]);
 
         $viaCEPModel->consultaCepViaCEPModel();
 
         /* Capturando o retorno do Model */
-        $this->set_result($viaCEPModel->get_result());
+        $this->setResult($viaCEPModel->getResult());
 
         /* Retorno do Controller */
-        echo($this->get_result());
+        echo($this->getResult());
     }
 }
 
